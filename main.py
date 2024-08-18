@@ -54,5 +54,8 @@ for filepath in filepaths:
     pdf.cell(w=35, h=8, txt="", border=0)
     pdf.cell(w=70, h=8, txt="$" + str(total_sum), border=1, ln=1)
 
+    # Add Total Price sentence
+    pdf.set_font(family="Times", size=10)
+    pdf.cell(w=20, h=8, txt=f"The total price is: ${total_sum}", border=0)
     #Creates PDF Invoice
     pdf.output(f"PDFs/{filename}.pdf")
